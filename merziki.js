@@ -3,7 +3,7 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("Tokeni Yazınız!!!!!");
+client.login("Token");
 const fetch = require("node-fetch");
 const fs = require('fs')
 
@@ -13,7 +13,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
     app.get("/", (request, response) => {
-    console.log(` az önce pinglenmedi. Sonra ponglanmadı... ya da başka bir şeyler olmadı.`);
+    console.log(`Uptimelanan botlardan birinde hata var! Uptimelayamıyorum!`);
     response.sendStatus(200);
     });
     app.listen(process.env.PORT);
@@ -28,7 +28,7 @@ client.on("ready", () => {
     console.log("Bot çalışıyor");
     let playing = client.voice.connections.size; 
 
-    client.user.setPresence({ activity: { name: `Jokerapp V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
+    client.user.setPresence({ activity: { name: `Youtube Merziki`, type: "STREAMING", url: "https://twitch.tv/merziki" } })
 
 });
 
@@ -43,7 +43,7 @@ setInterval(() => {
       fetch(link)
     } catch(e) { console.log("" + e) };
   })
-  console.log("Pong! Requests sent")
+  console.log("Aktif!")
 }, 60000)
 
 client.on("ready", () => {
@@ -71,7 +71,7 @@ client.on("message", message => {
 client.on("message", message => {
   if(message.author.bot) return;
   var spl = message.content.split(" ");
-  if(spl[0] == "!göster") {
+  if(spl[0] == "!say") {
   var link = spl[1]
  message.channel.send(`${db.get("linkler").length} Bot Aktif Tutuluyor!`)
 }})
