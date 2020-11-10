@@ -23,28 +23,31 @@ const http = require('http');
 
 //Oynuyor
 
-client.on("ready", () => {
+require("express")().listen(1343);
 
-    console.log("Bot çalışıyor");
-    let playing = client.voice.connections.size; 
+const db = require("quick.db");
+const discord = require("discord.js");
+const client = new discord.Client({ disableEveryone: true });
+client.login("Token");
+const fetch = require("node-fetch");
+const fs = require('fs')
 
-    client.user.setPresence({ activity: { name: `Youtube Merziki`, type: "STREAMING", url: "https://twitch.tv/merziki" } })
+//Uptime 
 
-});
+const express = require('express');
+const app = express();
+const http = require('http');
+    app.get("/", (request, response) => {
+    console.log(`Uptimelanan botlardan birinde hata var! Uptimelayamıyorum!`);
+    response.sendStatus(200);
+    });
+    app.listen(process.env.PORT);
+    setInterval(() => {
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+    }, 280000);
 
+//Oynuyor
 
-
-setInterval(() => {
-  var links = db.get("linkler");
-  if(!links) return;
-  var linkA = links.map(c => c.url)
-  linkA.forEach(link => {
-    try {
-      fetch(link)
-    } catch(e) { console.log("" + e) };
-  })
-  console.log("Aktif!")
-}, 60000)
 
 client.on("ready", () => {
 if(!Array.isArray(db.get("linkler"))) {
