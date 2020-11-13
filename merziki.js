@@ -8,7 +8,7 @@ const fetch = require("node-fetch");
 const fs = require('fs')
 
 //Uptime 
-
+const oynuyor = "Youtube Merziki";
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -23,30 +23,20 @@ const http = require('http');
 
 //Oynuyor
 
-require("express")().listen(1343);
 
-const db = require("quick.db");
-const discord = require("discord.js");
-const client = new discord.Client({ disableEveryone: true });
-client.login("Token");
-const fetch = require("node-fetch");
-const fs = require('fs')
+client.on("ready", async () => {
+  client.appInfo = await client.fetchApplication();
+  setInterval(async () => {
+    client.appInfo = await client.fetchApplication();
+  }, 60000);
+  console.log("Bot Aktif");
 
-//Uptime 
-
-const express = require('express');
-const app = express();
-const http = require('http');
-    app.get("/", (request, response) => {
-    console.log(`Uptimelanan botlardan birinde hata var! Uptimelayamıyorum!`);
-    response.sendStatus(200);
-    });
-    app.listen(process.env.PORT);
-    setInterval(() => {
-    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-    }, 280000);
-
-//Oynuyor
+  client.user.setStatus("oynuyor");
+  client.user.setActivity(oynuyor, {
+    type: "STREAMING",
+    url: "https://twitch.tv/merziki"
+  });
+});
 
 
 client.on("ready", () => {
