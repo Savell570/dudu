@@ -31,10 +31,10 @@ client.on("ready", async () => {
   }, 60000);
   console.log("Bot Aktif");
 
-  client.user.setStatus("oynuyor");
+  client.user.setStatus("#macks yükseliyoruz");
   client.user.setActivity(oynuyor, {
-    type: "STREAMING",
-    url: "https://twitch.tv/merziki"
+    type: "#macks yükseliyoruz",
+    url: "#macks yükseliyoruz"
   });
 });
 
