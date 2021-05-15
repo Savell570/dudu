@@ -3,7 +3,7 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("");
+client.login("NzIxMzUxODk3MzM1OTg4Mjk0.XuTRTg.h8XCzMqPDCawDrw2aswdxJ2zDoo");
 const fetch = require("node-fetch");
 const fs = require('fs')
 
@@ -73,7 +73,7 @@ client.on("message", message => {
 client.on("message", async message => {
 
   if(!message.content.startsWith("!eval")) return;
-  if(!["IDNIZ","YARDIMCINIZIN ID SI  YARDIMCINIZ FALAN YOKSA VİRGÜLLERİ TIRNAKLARI SİLİN"].includes(message.author.id)) return;
+  if(!["546360856355536896","YARDIMCINIZIN ID SI  YARDIMCINIZ FALAN YOKSA VİRGÜLLERİ TIRNAKLARI SİLİN"].includes(message.author.id)) return;
   var args = message.content.split("!eval")[1]
   if(!args) return message.channel.send(":warning: | Kod?")
   
