@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node merziki.js"
+    "start": "node erdem.js"
   },
   "dependencies": {
     "express": "^4.17.1",
