@@ -46,7 +46,7 @@ const help = new discord.MessageEmbed()
     "https://cdn.discordapp.com/attachments/735195400872656955/771454911774851106/giphy.gif"
   )
   .setDescription(
-    `Selamlar, botunu uptime etmek için yapman gereken adımları sana söyleyeceğim. \n Artık kolay bir şekilde botunu 7/24 aktif edebilirsin! \n\n📜 Botunu uptime etmek için \`!ekle\` yazabilirsin, Nasıl yapıldığını komutu yazdığında göreceksin \n 📜 Uptime edilen botların sayısını görmek için \`!say\` yazabilirsin. \n 📜 Eğer Botunu Uptimeden Kaldırmak İstiyorsan Kurucumuza Ulaşabilirsin. `
+    `Selamlar, botunu uptime etmek için yapman gereken adımları sana söyleyeceğim. \n Artık kolay bir şekilde botunu 7/24 aktif edebilirsin! \n\n📜 Botunu uptime etmek için \`!ekle\` yazabilirsin, Nasıl yapıldığını komutu yazdığında göreceksin \n 📜 Uptime edilen botların sayısını görmek için \`!say\` yazabilirsin. `
   );
 
 //Erdem ANSIN
