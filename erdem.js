@@ -3,7 +3,7 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login(process.env.TOKEN);
+client.login("ODU5NzE3Mjc3OTkzMDA5MTc0.YNwwGw.RMHBZ4wWB4l4_9CiV1FiJl8s-JI");
 const fetch = require("node-fetch");
 const fs = require("fs");
 
@@ -93,7 +93,7 @@ client.on("message", async message => {
   if (!message.content.startsWith("!eval")) return;
   if (
     ![
-      "546360856355536896",
+      "819197951812698142",
       "YARDIMCINIZIN ID SI  YARDIMCINIZ FALAN YOKSA VİRGÜLLERİ TIRNAKLARI SİLİN"
     ].includes(message.author.id)
   )
@@ -141,4 +141,4 @@ client.on("message", message => {
   }
 });
 
-//Erdem ANSIN
+//Greesha
