@@ -8,7 +8,7 @@ const fetch = require("node-fetch");
 const fs = require("fs");
 
 //Uptime
-const oynuyor = "Ephesus Uptime";
+const oynuyor = "!ekle";
 const express = require("express");
 const app = express();
 const http = require("http");
