@@ -3,7 +3,7 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("ODU5ODE5OTM4MDc1MTE1NTYw.YNyPtw.V9KdFOZmXvdijbC1v-LZq_Cd-1Q");
+client.login(process.env.TOKEN);
 const fetch = require("node-fetch");
 const fs = require("fs");
 
