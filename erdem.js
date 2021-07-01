@@ -3,17 +3,17 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("ODU5NzE3Mjc3OTkzMDA5MTc0.YNwwGw.RMHBZ4wWB4l4_9CiV1FiJl8s-JI");
+client.login("ODU5ODE5OTM4MDc1MTE1NTYw.YNyPtw.V9KdFOZmXvdijbC1v-LZq_Cd-1Q");
 const fetch = require("node-fetch");
 const fs = require("fs");
 
 //Uptime
-const oynuyor = "!ekle";
+const oynuyor = "!add";
 const express = require("express");
 const app = express();
 const http = require("http");
 app.get("/", (request, response) => {
-  console.log(`Uptimelanan botlardan birinde hata var! Uptimelayamıyorum!`);
+console.log(`One of the updated bots has an error! Cannot Uptime!`);
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -70,8 +70,7 @@ client.on("message", message => {
             .map(z => z.url)
             .includes(link)
         )
-          return message.channel.send("Botunuz Sistemimizde Zaten Var ❌");
-        message.channel.send("Botunuz Sistemimize Başarıyla Eklendi ✔️");
+j
         db.push("linkler", { url: link, owner: message.author.id });
       })
       .catch(e => {
@@ -85,7 +84,7 @@ client.on("message", message => {
   var spl = message.content.split(" ");
   if (spl[0] == "!say") {
     var link = spl[1];
-    message.channel.send(`${db.get("linkler").length} Bot Aktif Tutuluyor!`);
+    message.channel.send(`${db.get("linkler").length} Bot Keeping Active!`);
   }
 });
 
@@ -93,13 +92,13 @@ client.on("message", async message => {
   if (!message.content.startsWith("!eval")) return;
   if (
     ![
-      "819197951812698142",
-      "YARDIMCINIZIN ID SI  YARDIMCINIZ FALAN YOKSA VİRGÜLLERİ TIRNAKLARI SİLİN"
+      "859497498758086708",
+      "IF YOU DO NOT HAVE THE ID of YOUR ASSISTANT, DELETE THE COMMANDS"
     ].includes(message.author.id)
   )
     return;
   var args = message.content.split("!eval")[1];
-  if (!args) return message.channel.send(":warning: | Kod?");
+  if (!args) return message.channel.send(":warning: | Code?");
 
   const code = args;
 
@@ -135,7 +134,7 @@ client.on("message", async message => {
 client.on("message", message => {
   if (message.author.bot) return;
   var spl = message.content.split(" ");
-  if (spl[0] == "!yardım") {
+  if (spl[0] == "!help") {
     var link = spl[1];
     message.channel.send(help);
   }
