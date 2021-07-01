@@ -3,17 +3,17 @@ require("express")().listen(1343);
 const db = require("quick.db");
 const discord = require("discord.js");
 const client = new discord.Client({ disableEveryone: true });
-client.login("ODU5NzE3Mjc3OTkzMDA5MTc0.YNwwGw.RMHBZ4wWB4l4_9CiV1FiJl8s-JI");
+client.login("ODU5ODE5OTM4MDc1MTE1NTYw.YNyPtw.V9KdFOZmXvdijbC1v-LZq_Cd-1Q");
 const fetch = require("node-fetch");
 const fs = require("fs");
 
 //Uptime
-const oynuyor = "!ekle";
+const oynuyor = "!add";
 const express = require("express");
-const app = express();
+const p = express();
 const http = require("http");
 app.get("/", (request, response) => {
-  console.log(`Uptimelanan botlardan birinde hata var! Uptimelayamıyorum!`);
+ggvbfffv
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
