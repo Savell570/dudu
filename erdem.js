@@ -46,7 +46,7 @@ const help = new discord.MessageEmbed()
     "https://cdn.discordapp.com/attachments/735195400872656955/771454911774851106/giphy.gif"
   )
   .setDescription(
-    `Selamlar, botunu uptime etmek için yapman gereken adımları sana söyleyeceğim. \n Artık kolay bir şekilde botunu 7/24 aktif edebilirsin! \n\n📜 Botunu uptime etmek için \`!ekle\` yazabilirsin, Nasıl yapıldığını komutu yazdığında göreceksin \n 📜 Uptime edilen botların sayısını görmek için \`!say\` yazabilirsin. `
+    `Greetings, I will tell you the steps you need to do to uptime your bot. \n Now you can easily activate your bot 24/7! \n\n📜 You can type \`!add\` to uptime your bot, you will see how it is done when you type the command \n 📜 You can type \`!say\` to see the number of uptimed bots.`
   );
 
 //Erdem ANSIN
@@ -60,7 +60,7 @@ client.on("ready", () => {
 client.on("message", message => {
   if (message.author.bot) return;
   var spl = message.content.split(" ");
-  if (spl[0] == "!ekle") {
+  if (spl[0] == "!add") {
     var link = spl[1];
     fetch(link)
       .then(() => {
@@ -70,11 +70,12 @@ client.on("message", message => {
             .map(z => z.url)
             .includes(link)
         )
-j
+return message.channel.send("Your bot is already in our system ❌");
+         message.channel.send("Your bot has been successfully added to our system ✔️");
         db.push("linkler", { url: link, owner: message.author.id });
       })
       .catch(e => {
-        return message.channel.send("Lütfen Bir Link Giriniz ");
+        return message.channel.send("Please enter a link 🤣 ");
       });
   }
 });
